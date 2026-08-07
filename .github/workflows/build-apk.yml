@@ -29,6 +29,9 @@ jobs:
       - name: Ajouter la plateforme Android (générée à chaque build, pas commitée)
         run: npx cap add android
 
+      - name: Générer les icônes et le splash screen à partir du logo
+        run: npx capacitor-assets generate --android
+
       - name: Synchroniser Capacitor (copie la config vers le projet Android)
         run: npx cap sync android
 
