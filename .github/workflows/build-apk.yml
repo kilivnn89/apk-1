@@ -32,6 +32,12 @@ jobs:
       - name: Synchroniser Capacitor (copie la config vers le projet Android)
         run: npx cap sync android
 
+      - name: Ajouter les permissions Android (caméra, localisation, stockage, notifications)
+        run: |
+          MANIFEST=android/app/src/main/AndroidManifest.xml
+          sed -i 's#</manifest>#    <uses-permission android:name="android.permission.CAMERA" />\n    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />\n    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />\n    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />\n    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />\n    <uses-permission android:name="android.permission.RECORD_AUDIO" />\n    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />\n    <uses-feature android:name="android.hardware.camera" android:required="false" />\n    <uses-feature android:name="android.hardware.location" android:required="false" />\n</manifest>#' "$MANIFEST"
+          cat "$MANIFEST"
+
       - name: Rendre gradlew exécutable
         run: chmod +x android/gradlew
 
