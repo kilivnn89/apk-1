@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "460181623024",
+    "project_id": "mdm-5793a",
+    "storage_bucket": "mdm-5793a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460181623024:android:a5c1253032d65d972a7235",
+        "android_client_info": {
+          "package_name": "com.maitredemaison.parent"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAR8fyneTu5wtEx7SlxR2fGMZ_NJk_DUPE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
